@@ -1,17 +1,5 @@
-name1 = "ねずこ"
-name2 = "ぜんいつ"
+path = 'C:/Users/shuf4/practice1/source.csv' 
 
-if name2 == "むざん":
-    print ("仲間ではありません")
-
-name = ["たんじろう","ぎゆう","ねずこ","むざん"]
-
-for i in name:
-    print(i)    
-
-def search(i):
-    if i in name:
-        print(f"{i}は含まれている")     
-    
-search("ぎゆう")    
-  
+with open(path, mode='w', encoding='utf-8') as f:
+    l_strip = [s.strip() for s in f.readlines()]
+    f.write('\n'.join(l_strip))
